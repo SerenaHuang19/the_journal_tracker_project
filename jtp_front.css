@@ -1,0 +1,150 @@
+/* 
+GENERAL STUFF
+FONTS
+font-family: 'Amatic SC', cursive;
+font-family: 'Alegreya Sans', sans-serif;
+COLORS
+#28213D | Dark Slate Gray
+#443B57 | Dark Slate Gray (lighter)
+#CDBEBC | Silver
+#A28E90 | Dark Gray
+#80737E | Gray
+
+ */
+
+/* * {
+    border: 2px red solid;
+} */
+
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* ------------------------DIVS------------------------------------ */
+.main {
+    background-image: url("https://66.media.tumblr.com/b96ee07270b4c34e2b4f49ac4b67753e/4fbaec13f374aca7-1c/s500x750/3d1aafd9982cd6fc5ecdd1adbd71bb7da661647b.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: contain; 
+}
+
+.results {
+    height: 150vh;
+    width: 70vw;
+    background-color: white;
+    position: relative;
+    overflow: scroll;
+}
+
+.results::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+}
+.results::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px #A28E90; 
+    border-radius: 0px;
+}
+.results::-webkit-scrollbar-thumb {
+    background: #28213D; 
+    border-radius: 3px;
+}
+
+.titlediv {
+    height: 24vh;
+    width: 60vw;
+    background-color: white;
+    margin: auto;
+    /* border-bottom: 1px #80737E solid; */
+}
+
+.graph {
+    height: 60vh;
+    width: 60vw; 
+    margin: auto;
+}
+
+.plot {
+    width: 60vw;
+    height: 75vh;
+    left: 0vw; 
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 5vw;
+}
+
+.entrytext {
+    width: 60vw;
+    height: 75vh;
+    left: 0vw; 
+    position: absolute;
+    border: 1px #CDBEBC solid;
+    margin-top: 0vh;
+    margin-left: 5vw;
+    overflow: scroll;
+    margin-bottom: 7vh;
+    background-color: #F8F3F3;
+}
+
+.entrytext::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+}
+.entrytext::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px #A28E90; 
+    border-radius: 0px;
+}
+.entrytext::-webkit-scrollbar-thumb {
+    background: #28213D; 
+    border-radius: 3px;
+}
+
+/* ------------------------TEXT------------------------------------ */
+.title {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 48px;
+    line-height: 50%;
+    color: #80737E;
+}
+
+.title2 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    line-height: 50%;
+    color: #80737E;
+}
+
+.instructions {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #28213D;
+}
+
+#inputtypes {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #28213D;
+}
+
+.lg {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #28213D;
+}
+
+.w3-bar-item { 
+    margin: auto; 
+    width: 30vw; 
+    height: 5vh; 
+    font-family: 'Amatic SC', cursive; 
+    font-size: 24px;
+    color: white;
+    background-color: #CDBEBC;
+    background-origin: none;
+}

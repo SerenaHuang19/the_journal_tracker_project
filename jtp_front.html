@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html> -->
+    <head>
+        <title>
+            The Journal Tracker Project
+        </title>
+        <link rel="icon" href="https://66.media.tumblr.com/b96ee07270b4c34e2b4f49ac4b67753e/4fbaec13f374aca7-1c/s500x750/3d1aafd9982cd6fc5ecdd1adbd71bb7da661647b.jpg">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "stylesheet" type = "text/css" href = "jtp_front.css">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Amatic+SC:wght@700&display=swap" rel="stylesheet"></head>
+        <script language = "javascript" type = "text/javascript" src = "jtp_front.js"> </script>
+    <body>
+        <div class = "main">
+            <div class = "results">
+                <div class = "titlediv">
+                    <h1 class = "title2">The</h1>
+                    <h1 class = "title">Journal Tracker</h1>
+                    <h1 class = "title2">Project</h1>
+                </div>
+                <div class="w3-bar w3-black" style = "margin:auto; width: 61vw; height: 5vh; padding-bottom: 2vw;">
+                    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Track</button>
+                    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Read</button>
+                  </div>
+                <div id="Tokyo" class="w3-container city">
+                <div class = "graph" style = "height:95vh;">
+                    <p class = "instructions">
+                        <b>New:</b> Click 'Track' without a search term to view word counts!<br><br>
+                        Enter up to ten comma-separated terms or regex expressions, select a year and a part, then click 'Track': <br>
+                        <i>(Note that 2018 Part 2 and 2018 Summer currently do not exist)</i>
+                    </p>
+                    <form id = "form2" action = "/">
+                        <input type = "text" id = "textbox" name = "search" style = "width: 45vw"> 
+                        <!-- <input type="radio" id = "radiosl" name="output" value="sl" checked><label id="inputtypes" for="radiosl"> Single View </label>
+                        <input type="radio" id = "radioml" name="output" value="ml"><label id="inputtypes" for ="radioml"> Multiple View </label> -->
+                        <!-- <label for="years" class = "instructions">Year:</label> -->
+                        <select name = "years" id="years">
+                            <option name="year" value="all">All</option>
+                            <option name="year" value="2015">2015</option>
+                            <option name="year" value="2016">2016</option>
+                            <option name="year" value="2017">2017</option>
+                            <option name="year" value="2018">2018</option>
+                            <option name="year" value="2019">2019</option>
+                        </select>
+                        <!-- <label for="parts" class = "instructions">Part:</label> -->
+                        <select name = "parts" id="parts">
+                            <option name="part" value="0">All</option>
+                            <option name="part" value="1">Part 1</option>
+                            <option name="part" value="2">Part 2</option>
+                            <option name="part" value="s">Summer</option>
+                        </select>
+                        <button type = "button" id = "submit2" name = "submit2" onclick = "submit_form2();" style = "font-family: 'Alegreya Sans', sans-serif;" class = "instructions"> Track </button>
+                    </form>
+                    <div class = "plot" id = "plot">
+                        <p class = "instructions">
+                            The results will appear here.
+                        </p>
+                    </div>
+                </div>
+                </div>
+                <!-- second part of page----------------------------------------------------------------- -->
+                <div id="Paris" class="w3-container city" style="display:none">
+                <div class = "graph">
+                    <p class = "instructions">
+                        Select a month, day, and year to retrieve that date's entry: 
+                        <i>(Note that not all days are available)</i>
+                    </p>
+                    <form id = "form3" action = "/">
+                        <select name = "months" id="months">
+                            <option name="month" value="Jan">January</option>
+                            <option name="month" value="Feb">February</option>
+                            <option name="month" value="Mar">March</option>
+                            <option name="month" value="Apr">April</option>
+                            <option name="month" value="May">May</option>
+                            <option name="month" value="Jun">June</option>
+                            <option name="month" value="Jul">July</option>
+                            <option name="month" value="Aug">August</option>
+                            <option name="month" value="Sep">September</option>
+                            <option name="month" value="Oct">October</option>
+                            <option name="month" value="Nov">November</option>
+                            <option name="month" value="Dec">December</option>
+                        </select>
+                        <select name = "days" id="days">
+                            <option name="day" value="1">1</option>
+                            <option name="day" value="2">2</option>
+                            <option name="day" value="3">3</option>
+                            <option name="day" value="4">4</option>
+                            <option name="day" value="5">5</option>
+                            <option name="day" value="6">6</option>
+                            <option name="day" value="7">7</option>
+                            <option name="day" value="8">8</option>
+                            <option name="day" value="9">9</option>
+                            <option name="day" value="10">10</option>
+                            <option name="day" value="11">11</option>
+                            <option name="day" value="12">12</option>
+                            <option name="day" value="13">13</option>
+                            <option name="day" value="14">14</option>
+                            <option name="day" value="15">15</option>
+                            <option name="day" value="16">16</option>
+                            <option name="day" value="17">17</option>
+                            <option name="day" value="18">18</option>
+                            <option name="day" value="19">19</option>
+                            <option name="day" value="20">20</option>
+                            <option name="day" value="21">21</option>
+                            <option name="day" value="22">22</option>
+                            <option name="day" value="23">23</option>
+                            <option name="day" value="24">24</option>
+                            <option name="day" value="25">25</option>
+                            <option name="day" value="26">26</option>
+                            <option name="day" value="27">27</option>
+                            <option name="day" value="28">28</option>
+                            <option name="day" value="29">29</option>
+                            <option name="day" value="30">30</option>
+                            <option name="day" value="31">31</option>
+                        </select>
+                        <select name = "years" id="years">
+                            <option name="year" value="2015">2015</option>
+                            <option name="year" value="2016">2016</option>
+                            <option name="year" value="2017">2017</option>
+                            <option name="year" value="2018">2018</option>
+                            <option name="year" value="2019">2019</option>
+                        </select>
+                        <button type = "button" id = "submit3" name = "submit3" onclick = "submit_form3();" style = "font-family: 'Alegreya Sans', sans-serif;" class = "instructions"> Read </button>
+                    </form>
+                    <div class = "entrytext" id = "entrytext">
+                        <p class = "instructions" style = "padding: 3vw; line-height: 175%;">
+                            The entry will appear here.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+<!-- </html> -->
