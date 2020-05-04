@@ -9,7 +9,7 @@ This project is partially inspired by [Google Ngram Viewer](https://books.google
 ### Some notes: 
 * The data (the raw text files containing the journal entries) is not publicly available for privacy reasons. 
 * The data spans the five years from January 1, 2015 to December 31, 2019, with some gaps, most notably in the latter half of 2018. In the future, more data will be added as time goes on. 
-* The current word count is 4 030 716 and the current character count is 22302935.
+* The current word count is 4 030 716 and the current character count is 22 302 935.
 * The search bar accepts up to ten comma-separated strings or regular expressions, which allow for a greater flexibility in searches, in particular when dealing with case insensitivity or morphological inflections. 
 * The graphs are produced using [Plotly](https://plotly.com/).
 
